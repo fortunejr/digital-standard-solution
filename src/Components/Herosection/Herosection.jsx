@@ -1,84 +1,55 @@
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa6";
-import { HiOutlineDocumentText } from 'react-icons/hi'
-import { MdOutlineMail } from "react-icons/md";
+import { HiOutlineDocumentText } from 'react-icons/hi';
 import { FaCalendarCheck } from 'react-icons/fa';
 import { MdExplore } from 'react-icons/md';
-import "./herosection.css";
-import { img2, img9 } from "../../imports";
+import { img9 } from "../../imports";
 
 const Herosection = () => {
-  const images = [
-    {
-      imgUrl:
-        "https://img.freepik.com/premium-photo/suitcase-with-famous-monuments-isolated-with-clouds-famous-buildings-landmarks-towers-travel_741269-8.jpg?ga=GA1.1.2145612538.1736353082&semt=ais_hybrid",
-      alt: "Travel img",
-    },
-    {
-      imgUrl:
-        "https://img.freepik.com/free-photo/woman-checking-map-autumn-travel-destination_23-2148634143.jpg?ga=GA1.1.2145612538.1736353082&semt=ais_incoming",
-      alt: "Travel img",
-    },
-    {
-      imgUrl:
-        "https://img.freepik.com/free-photo/trendy-looking-african-american-tourist-with-backpack-hat-sunglasses-studying-directions-using-city-guide-while-exploring-sights-landmarks-resort-town_273609-952.jpg?ga=GA1.1.2145612538.1736353082&semt=ais_incoming",
-      alt: "Travel img",
-    },
-    {
-      imgUrl:
-        "https://img.freepik.com/premium-photo/untitled-design-5_1210786-40.jpg?ga=GA1.1.2145612538.1736353082&semt=ais_hybrid",
-      alt: "Travel img",
-    },
-  ];
-
   return (
-    <div className="">
-      <div className="bg-customOrange">
-        <div className="lg:px-7 pt-14 container mx-auto px-7  h-fit lg:p-28 p-8 gap-4 flex flex-col lg:flex-row lg:justify-between items-center">
-          <div className="lg:w-2/5 ">
-            <p className="text-white font-bold">
-              Oaks & Trust Insurance
-            </p>
-            <h1 className="lg:text-5xl leading-tight font-black text-3xl text-white pb-6 slide-in-bottom">
-              Australia’s Trusted Partner in Insurance
-              Tailored Protection for Every Stage of Life and Business
+    <div className="bg-customOrange">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 flex flex-col lg:flex-row items-center gap-8">
+        
+        {/* Left Side - Text Content */}
+        <div className="lg:w-2/5 w-full">
+          <p className="text-white font-bold">Oaks & Trust Insurance</p>
+          <h1 className="text-3xl lg:text-5xl font-black text-white leading-tight pb-6">
+            Australia’s Trusted Partner in Insurance<br />
+            Tailored Protection for Every Stage of Life and Business
+          </h1>
+          <p className="text-white text-base lg:text-sm">
+            At Oaks & Trust Insurance, we believe in protection with purpose. Whether you're a homeowner, entrepreneur, or investor, we provide bespoke insurance solutions that protect your assets, mitigate risks, and give you peace of mind in an ever-changing world.
+          </p>
 
-            </h1>
-            <p className="lg:text-sm text-white lg:w-120 slide-in-left">
-              At Oaks & Trust Insurance, we believe in protection with purpose. Whether you're a homeowner, entrepreneur, or investor, we provide bespoke insurance solutions that protect your assets, mitigate risks, and give you peace of mind in an ever-changing world.
-
-            </p>
-
-            <div className="pt-9 flex items-center gap-3 slide-in-left2">
-              <a target="_blank" href="https://wa.me/2348135217518">
-                <button className="lg:rounded-2xl lg:px-3 flex gap-2 items-center bg-white p-4 rounded-2xl font-bold text-black cursor-pointer">
-                  <HiOutlineDocumentText size={27} />
-                  Get A Free Quote
-                </button>
-              </a>
-              <a href="mailto:info@lumigrid.com.ng">
-                <button className="lg:rounded-2xl lg:px-5 flex gap-2 items-center border-white hover:bg-customYellow border-2 p-4 rounded-2xl font-bold text-white cursor-pointer">
-                  <FaCalendarCheck size={27} />
-                  Book a Consultation
-                </button>
-              </a>
-              <a href="mailto:info@lumigrid.com.ng">
-                <button className="lg:rounded-2xl lg:px-5 flex gap-2 items-center border-white hover:bg-customYellow border-2 p-4 rounded-2xl font-bold text-white cursor-pointer">
-                  <MdExplore size={27} />
-                  Explore Our Products
-                </button>
-              </a>
-            </div>
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-9">
+            <a href="https://wa.me/2348135217518" target="_blank" rel="noopener noreferrer">
+              <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-black font-bold px-5 py-3 rounded-2xl">
+                <HiOutlineDocumentText size={24} />
+                Get A Free Quote
+              </button>
+            </a>
+            <a href="mailto:info@lumigrid.com.ng">
+              <button className="w-full sm:w-auto flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-customYellow font-bold px-5 py-3 rounded-2xl">
+                <FaCalendarCheck size={24} />
+                Book a Consultation
+              </button>
+            </a>
+            <a href="mailto:info@lumigrid.com.ng">
+              <button className="w-full sm:w-auto flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-customYellow font-bold px-5 py-3 rounded-2xl">
+                <MdExplore size={24} />
+                Explore Our Products
+              </button>
+            </a>
           </div>
+        </div>
 
-          {/* Image */}
-          <div className="w-full lg:w-1/2 pt-5 lg:pt-0 lg:mb-0">
-            <img
-              className="object-cover w-full h-48 md:h-72 lg:h-96 rounded-3xl slide-in-blurred-bottom"
-              src={img9}
-              alt="solar panel"
-            />
-          </div>
+        {/* Right Side - Image */}
+        <div className="w-full lg:w-1/2">
+          <img
+            src={img9}
+            alt="insurance visual"
+            className="w-full h-56 sm:h-72 lg:h-96 object-cover rounded-3xl"
+          />
         </div>
       </div>
     </div>
