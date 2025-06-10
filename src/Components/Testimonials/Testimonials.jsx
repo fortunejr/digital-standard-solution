@@ -1,49 +1,70 @@
-import React from 'react'
-import FadeIn from '../fadein'
+import React, { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const testimonials = [
-    {
-        testimonial: "We had 24/7 electricity for over 6 months without touching the grid. LumiGrid's solution exceeded our expectations. Truly exceptional technical delivery.",
-        name: "Dr. Okwuosa M., Victoria Garden City"
-    },
-    {
-        testimonial: "Their technical know-how, especially in sizing and inverter selection, was spot-on. Our energy bills dropped by 80%.",
-        name: "Mr. Abayomi T., Lekki Phase 1"
-    },
+  {
+    quote:
+      '“We had trouble understanding the right type of business coverage until Oaks & Trust stepped in. They were transparent and proactive throughout.”',
+    author: '— Linda K., Sydney'
+  },
+  {
+    quote:
+      '“The claims process was so fast and stress-free. It’s clear their priority is customer satisfaction, not just paperwork.”',
+    author: '— James T., Perth'
+  },
+  {
+    quote:
+      '“As a first-time homebuyer, I appreciated how they walked me through everything. I’ve already referred three friends.”',
+    author: '— Melissa R., Brisbane'
+  },
+  {
+    quote:
+      '“We saved over $1,500 per year by bundling our business and home insurance—and now have more complete coverage!”',
+    author: '— Rajesh P., Melbourne'
+  }
 ]
 
 const Testimonials = () => {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % testimonials.length)
+    }, 10000) // 10 seconds
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const slideVariants = {
+    initial: { opacity: 0, x: 50 },
+    animate: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+    exit: { opacity: 0, x: -50, transition: { duration: 0.4 } }
+  }
+
   return (
-    <div className='bg-gray-300'>
-    <div id='testimonials' className='lg:px-40 lg:py-20 container mx-auto px-7 py-14'>
-      <FadeIn duration = {100} >
-      <div className="flex justify-center items-center pb-7">
-        <h2 className="text-3xl font-bold w-full ">Testimonials</h2>
-      </div>
-      </FadeIn>
+    <div className='bg-white px-7 py-14'>
+      <div className='container mx-auto max-w-3xl text-center'>
+        <h2 className='text-3xl font-bold text-black mb-10'>Our Clients Say It Best</h2>
 
-      <div className='flex gap-4 overflow-scroll testimonials '>
-        {testimonials.map((item) => {
-            return (
-              <FadeIn duration = {100} >
-              <div className="lg:flex-col lg:w-150 bg-customBlue w-lvw flex gap-4 flex-col justify-center items-center pt-5">
-                <div className="lg:h-2.5 lg:w-9 h-3 w-10 rounded-full bg-customYellow"></div>
-
-                <div className='px-9 '>
-                <p className="text-white ">{item.testimonial}</p>
-                </div>
-
-                <div className='bg-white w-full h-full'>
-                <p className="text-black py-3 ml-5 font-bold">{item.name}</p>
-                </div>
-              </div>
-              </FadeIn>
-            )
-  
-        })}
+        <div className='relative h-48 sm:h-52 md:h-56 lg:h-64 overflow-hidden'>
+          <AnimatePresence mode='wait'>
+            <motion.div
+              key={index}
+              variants={slideVariants}
+              initial='initial'
+              animate='animate'
+              exit='exit'
+              className='absolute inset-0 flex flex-col justify-center items-center text-black px-6'
+            >
+              <p className='text-lg sm:text-xl mb-4 italic leading-relaxed'>
+                {testimonials[index].quote}
+              </p>
+              <p className='text-customYellow font-semibold'>{testimonials[index].author}</p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
-      </div>
-      </div>
+    </div>
   )
 }
 

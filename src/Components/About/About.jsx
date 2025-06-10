@@ -18,14 +18,14 @@ const About = () => {
         <div className='lg:w-1/2 lg:pl-10'>
             <h2 className='font-bold text-3xl mt-7 lg:text-6xl'>Who are we?</h2>
             <p className='lg:text-xl mt-4'>
-                LumiGrid Technology Limited is a pioneering renewable energy firm committed to bridging Nigeria's energy access gap through the deployment of advanced solar power technologies. Founded by a team of electrical engineers, power system designers, and energy transition experts, LumiGrid delivers precision-engineered solar solutions that combine state-of-the-art photovoltaic technology with intelligent energy management systems.
+                Oaks & Trust Insurance was founded with a clear purpose: to offer dependable, high-quality insurance that Australians can trust. With years of combined experience in the finance and insurance sectors, our leadership and advisors understand the importance of protecting what matters most—from homes and families to businesses and investments.
             </p>
         </div>
     </div>
 
     <div className='pt-7'>
       <Link to= {"/about"}>
-        <button className='flex items-center justify-evenly gap-4 bg-customBlue px-5 py-3 rounded-xl font-bold text-white'>Read More
+        <button className='flex items-center justify-evenly gap-4 bg-customOrange px-5 py-3 rounded-xl font-bold text-white'>Read More
         <FaArrowRight />
            </button>
 

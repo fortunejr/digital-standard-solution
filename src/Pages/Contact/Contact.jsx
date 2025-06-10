@@ -43,9 +43,12 @@ const Contact = () => {
           We'd love to hear from you. Reach out to us using any of the methods below or fill out the form.
         </p>
         <div className="space-y-4 text-gray-800 text-sm">
-          <p><span className="font-bold">📍 Address:</span> G1 H6, Idejo Avenue, Royal Gardens Estate, Ajah, Lagos</p>
-          <p><span className="font-bold">📧 Email:</span> info@lumigrid.com.ng</p>
-          <p><span className="font-bold">📞 Phone:</span> +234 901 234 5678</p>
+          <p><span className="font-bold">📍 Address:</span> Oaks & Trust Insurance Headquarters
+          Level 10, 345 Collins Street
+          Melbourne, VIC 3000
+          </p>
+          <p><span className="font-bold">📧 Email:</span> support@oaksandtrust.com.au</p>
+          <p><span className="font-bold">📞 Phone:</span> 1300 000 123</p>
         </div>
       </div>
 

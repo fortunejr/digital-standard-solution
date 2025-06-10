@@ -15,12 +15,16 @@ const Navbar = () => {
         link: "/services"
       },
       {
-        name: "Why choose Us",
-        link: "/advantages"
+        name: "Products",
+        link: "/products"
       },
       {
-        name: "Meet the CEO",
-        link: "/abouttheceo"
+        name: "Blog",
+        link: "/blog"
+      },
+      {
+        name: "Claims",
+        link: "/claims"
       },
       {
         name: "Contact",
@@ -40,17 +44,17 @@ const Navbar = () => {
         <Link to = "/" >
         <img className='lg:h-18 lg:mr-60 h-12' src= {logo} alt="" />
         </Link>
-        <div className='hidden gap-20 mx-auto lg:flex cursor-pointer'>
+        <div className='hidden gap-10 mx-auto lg:flex cursor-pointer'>
             {menuItems.map(menu => (
               menu.link.includes("#") ? 
               <a href={menu.link} className='nav-link'>
-              <p className='nav-menu hover:text-customBlue'>{menu.name}</p>
+              <p className='nav-menu hover:text-customOrange'>{menu.name}</p>
               {/* {menu.name} */}
             </a>
 
               :
               <Link to={menu.link} className='nav-link'>
-                <p className='nav-menu hover:text-customBlue'>{menu.name}</p>
+                <p className='nav-menu hover:text-customOrange'>{menu.name}</p>
                 {/* {menu.name} */}
               </Link>
 

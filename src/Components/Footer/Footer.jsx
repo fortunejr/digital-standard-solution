@@ -17,15 +17,21 @@ const Footer = () => {
         <img className='h-14 mb-4' src={logo} alt="LumiGrid logo" />
       </Link>
         <p className='text-white text-sm leading-relaxed'>
-          LumiGrid Technology Limited is a pioneering renewable energy firm committed to bridging Nigeria's energy access gap through the deployment of advanced solar power technologies.
+          Let’s Discuss Your Insurance Needs
         </p>
+        <p className='text-white text-sm leading-relaxed'>Business Hours:</p>
+        <p className='text-white text-sm leading-relaxed'>Monday–Friday, 8:30 AM – 5:00 PM</p>
       </div>
 
       {/* Contact Info */}
       <div className='lg:w-1/3'>
         <h2 className='font-bold text-white pb-3 pt-7 lg:pt-0'>Contact Information</h2>
-        <p className='text-white text-sm'>📍 G1 H6, Idejo Avenue, Royal Gardens Estate, Ajah.</p>
-        <p className='text-white text-sm mt-2'>📧 info@lumigrid.com.ng</p>
+        <p className='text-white text-sm'>📍 Oaks & Trust Insurance Headquarters
+        Level 10, 345 Collins Street
+        Melbourne, VIC 3000
+        </p>
+        <p className='text-white text-sm mt-2'>📧 support@oaksandtrust.com.au </p>
+        <p className='text-white text-sm mt-2'>📞 1300 000 123</p>
       </div>
 
       {/* Social Icons */}
@@ -61,7 +67,7 @@ const Footer = () => {
 
     {/* Copyright */}
     <p className="text-center text-sm mt-10 text-white">
-      &copy; {year} LumiGrid Technology Limited
+      &copy; {year} Oaks & Trust Insurance
     </p>
   </div>
 </footer>
