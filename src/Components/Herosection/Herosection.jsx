@@ -6,40 +6,34 @@ import { img9 } from "../../imports";
 
 const Herosection = () => {
   return (
-    <div className="bg-customOrange">
+    <div className="bg-customBlue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 flex flex-col lg:flex-row items-center gap-8">
         
         {/* Left Side - Text Content */}
         <div className="lg:w-2/5 w-full">
-          <p className="text-white font-bold">Oaks & Trust Insurance</p>
+          <p className="text-white font-bold">Digital Standard Solution</p>
           <h1 className="text-3xl lg:text-5xl font-black text-white leading-tight pb-6">
-            Australia’s Trusted Partner in Insurance<br />
-            Tailored Protection for Every Stage of Life and Business
+            Empowering Growth Through Strategic Investment Lending
           </h1>
           <p className="text-white text-base lg:text-sm">
-            At Oaks & Trust Insurance, we believe in protection with purpose. Whether you're a homeowner, entrepreneur, or investor, we provide bespoke insurance solutions that protect your assets, mitigate risks, and give you peace of mind in an ever-changing world.
+            Digital Standard Solution offers tailored, low-interest investment loans for individuals and businesses ready to expand, build and lead with confidence.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-9">
             <a href="https://wa.me/2348135217518" target="_blank" rel="noopener noreferrer">
-              <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-black font-bold px-5 py-3 rounded-2xl">
+              <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-customYellow text-black font-bold px-5 py-3 rounded-2xl">
                 <HiOutlineDocumentText size={24} />
-                Get A Free Quote
+                Request a Loan Quote
               </button>
             </a>
             <a href="mailto:info@lumigrid.com.ng">
               <button className="w-full sm:w-auto flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-customYellow font-bold px-5 py-3 rounded-2xl">
                 <FaCalendarCheck size={24} />
-                Book a Consultation
+                Book a Free Consultation
               </button>
             </a>
-            <a href="mailto:info@lumigrid.com.ng">
-              <button className="w-full sm:w-auto flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-customYellow font-bold px-5 py-3 rounded-2xl">
-                <MdExplore size={24} />
-                Explore Our Products
-              </button>
-            </a>
+            
           </div>
         </div>
 

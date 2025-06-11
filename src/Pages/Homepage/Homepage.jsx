@@ -2,20 +2,16 @@ import React from 'react'
 import Herosection from '../../Components/Herosection/Herosection'
 import About from '../../Components/About/About'
 import Services from '../../Components/Services/Services'
-import Testimonials from '../../Components/Testimonials/Testimonials'
-import FAQs from '../../Components/FAQs/FAQs'
-import Resources from '../../Components/Resources/Resources'
+import WhyChooseUs from '../../Components/WhyChooseUs/WhyChooseUs'
 
 const Homepage = () => {
   return (
     <div>
         <Herosection />
-        <About />
+        <About/>
+        <WhyChooseUs />
         <Services />
-        <Resources />
-        <FAQs/>
-        <Testimonials />
-       
+        
     </div>
   )
 }

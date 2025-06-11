@@ -15,16 +15,12 @@ const Navbar = () => {
         link: "/services"
       },
       {
-        name: "Products",
-        link: "/products"
-      },
-      {
         name: "Blog",
         link: "/blog"
       },
       {
-        name: "Claims",
-        link: "/claims"
+        name: "FAQs",
+        link: "/faq"
       },
       {
         name: "Contact",

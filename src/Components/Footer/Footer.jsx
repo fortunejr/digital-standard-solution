@@ -20,7 +20,7 @@ const Footer = () => {
           Let’s Discuss Your Insurance Needs
         </p>
         <p className='text-white text-sm leading-relaxed'>Business Hours:</p>
-        <p className='text-white text-sm leading-relaxed'>Monday–Friday, 8:30 AM – 5:00 PM</p>
+        <p className='text-white text-sm leading-relaxed'>Monday–Friday, 9:00 AM to 6:00 PM (EST)</p>
       </div>
 
       {/* Contact Info */}
@@ -30,8 +30,8 @@ const Footer = () => {
         Level 10, 345 Collins Street
         Melbourne, VIC 3000
         </p>
-        <p className='text-white text-sm mt-2'>📧 support@oaksandtrust.com.au </p>
-        <p className='text-white text-sm mt-2'>📞 1300 000 123</p>
+        <p className='text-white text-sm mt-2'>📧 info@valleyoakfinance.com </p>
+        <p className='text-white text-sm mt-2'>📞 +1 (800) 123-4567</p>
       </div>
 
       {/* Social Icons */}

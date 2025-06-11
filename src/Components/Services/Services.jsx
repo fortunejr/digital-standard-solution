@@ -1,157 +1,65 @@
-import React, { useState } from 'react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { img1, img3, img4, img5, img6 } from '../../imports'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { MdBusiness, MdRealEstateAgent, MdWork, MdBuild } from 'react-icons/md';
 
-const serviceListIndividual = [
+const loanOptions = [
   {
-    name: 'Personalised Insurance Assessments',
-    desc: 'One-on-one consultations to identify ideal coverage based on lifestyle, assets, and risk profile.',
-    img: img1
+    icon: <MdBusiness size={28} className="text-customBlue" />,
+    title: 'Business Expansion Loans',
+    description: 'Fund growth, hiring, new locations, or product launches.',
   },
   {
-    name: 'Multi-Policy Bundling & Discounts',
-    desc: 'Save money by bundling home, car, and life insurance policies.',
-    img: img3
+    icon: <MdRealEstateAgent size={28} className="text-customBlue" />,
+    title: 'Real Estate Investment Loans',
+    description: 'Finance acquisitions, renovations, and development projects.',
   },
   {
-    name: 'Annual Policy Review & Updates',
-    desc: 'We adjust your coverage as your circumstances change.',
-    img: img4
-  }
-]
-
-const serviceListBusinesses = [
-  {
-    name: 'Risk Management Planning',
-    desc: 'Identify key risk exposures and develop an insurance strategy tailored to your industry.',
-    img: img5
+    icon: <MdWork size={28} className="text-customBlue" />,
+    title: 'Working Capital Loans',
+    description: 'Ensure cash flow for operations, inventory, and expenses.',
   },
   {
-    name: 'Employee Benefits Insurance',
-    desc: 'Group life and income protection for staff retention and peace of mind.',
-    img: img6
+    icon: <MdBuild size={28} className="text-customBlue" />,
+    title: 'Project-Based Financing',
+    description: 'Tailored funding for unique, milestone-driven initiatives.',
   },
-  {
-    name: 'Custom SME & Corporate Packages',
-    desc: 'Insurance solutions for startups, SMEs, and enterprises.',
-    img: img1
-  }
-]
-
-const serviceListAdded = [
-  {
-    name: 'Claims Assistance Hotline',
-    desc: 'Quick access to support when you need to file a claim.',
-    img: img3
-  },
-  {
-    name: '24/7 Customer Support',
-    desc: 'Round-the-clock assistance to help with any insurance queries.',
-    img: img4
-  },
-  {
-    name: 'Renewal Alerts & Proactive Consultation',
-    desc: 'Timely reminders and strategy reviews to keep your policies up to date.',
-    img: img5
-  }
-]
+];
 
 const Services = () => {
-  const [showIndividual, setShowIndividual] = useState(false)
-  const [showBusiness, setShowBusiness] = useState(false)
-  const [showAdded, setShowAdded] = useState(false)
-
-  const sectionToggle = (section) => {
-    if (section === 'individual') setShowIndividual(!showIndividual)
-    if (section === 'business') setShowBusiness(!showBusiness)
-    if (section === 'added') setShowAdded(!showAdded)
-  }
-
-  const renderServiceCards = (list) => (
-    <div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-white mt-5'>
-      {list.map((item, i) => (
-        <div key={i} className='bg-gray-900 p-5 rounded-3xl shadow-lg'>
-          <img src={item.img} alt={item.name} className='w-full h-52 object-cover rounded-2xl mb-4' />
-          <h3 className='font-bold text-xl text-customYellow mb-2'>{item.name}</h3>
-          <p className='text-sm text-gray-300'>{item.desc}</p>
-        </div>
-      ))}
-    </div>
-  )
-
   return (
-    <div className='px-12 py-10 bg-customOrange'>
-      <div className='container mx-auto max-w-4xl text-white'>
-        <h2 className='text-3xl font-bold'>Services</h2>
-        <h4 className='text-lg'>Tailored Services to Match Your Life and Business Needs</h4>
-        <p className='w-4/5 mt-2'>
-          Oaks & Trust Insurance is more than just a policy provider. We are your strategic partner in managing risk. Our services go beyond standard cover to offer expert guidance, structured planning, and end-to-end claims support.
+    <section className="bg-white text-black py-16 px-6 md:px-20">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+          Flexible Investment Loans Designed for Strategic Growth
+        </h2>
+
+        <p className="text-lg text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+          At Valley Oak Finance, we recognize that no two financial needs are alike.
+          Our services are designed to support entrepreneurs, SMEs, and investors with reliable capital
+          that fosters sustainable growth. Each loan is tailored, competitively priced,
+          and structured to deliver maximum impact.
         </p>
-        <h3 className='mt-4 text-xl'>Our Key Services Include:</h3>
 
-        {/* Section: For Individuals */}
-        <div className='mt-8 cursor-pointer' onClick={() => sectionToggle('individual')}>
-          <div className='flex justify-between items-center bg-black p-4 rounded-xl'>
-            <h2 className='text-2xl font-semibold'>For Individuals:</h2>
-            {showIndividual ? <ChevronUp /> : <ChevronDown />}
-          </div>
-          <AnimatePresence>
-            {showIndividual && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {renderServiceCards(serviceListIndividual)}
-              </motion.div>
-            )}
-          </AnimatePresence>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-10">
+          {loanOptions.map((option, index) => (
+            <div key={index} className="flex flex-col items-start gap-3 bg-gray-50 p-6 rounded-xl hover:shadow-xl transition">
+              <div>{option.icon}</div>
+              <h3 className="text-lg font-semibold">{option.title}</h3>
+              <p className="text-sm text-gray-600">{option.description}</p>
+            </div>
+          ))}
         </div>
 
-        {/* Section: For Businesses */}
-        <div className='mt-8 cursor-pointer' onClick={() => sectionToggle('business')}>
-          <div className='flex justify-between items-center bg-black p-4 rounded-xl'>
-            <h2 className='text-2xl font-semibold'>For Businesses:</h2>
-            {showBusiness ? <ChevronUp /> : <ChevronDown />}
-          </div>
-          <AnimatePresence>
-            {showBusiness && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {renderServiceCards(serviceListBusinesses)}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-
-        {/* Section: Added Support Services */}
-        <div className='mt-8 cursor-pointer' onClick={() => sectionToggle('added')}>
-          <div className='flex justify-between items-center bg-black p-4 rounded-xl'>
-            <h2 className='text-2xl font-semibold'>Added Support Services:</h2>
-            {showAdded ? <ChevronUp /> : <ChevronDown />}
-          </div>
-          <AnimatePresence>
-            {showAdded && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {renderServiceCards(serviceListAdded)}
-              </motion.div>
-            )}
-          </AnimatePresence>
+        <div className="text-center">
+          <Link to="/services">
+            <button className="bg-customBlue text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300">
+              View All Services
+            </button>
+          </Link>
         </div>
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default Services
+export default Services;
