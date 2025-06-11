@@ -10,7 +10,10 @@ export default {
         customBlue: "#000066",
         customYellow: "#eff227",
         
-      }
+      },
+      fontFamily: {
+        archivo: ['"Archivo Black"', 'sans-serif'], // register Archivo Black
+      },
     },
   },
   plugins: [],

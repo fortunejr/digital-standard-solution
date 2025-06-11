@@ -10,11 +10,11 @@ const About = () => {
         {/* Text Section */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black">
-            About Valley Oak Finance
+            About Digital Standard Solution
           </h2>
 
           <p className="text-lg mb-4 text-black">
-            <strong>Overview:</strong> Valley Oak Finance is a premier loan investment company providing strategic financing solutions to businesses and individuals globally. Established over 10 years ago, our firm has become synonymous with trust, agility, and professionalism in investment lending.
+            <strong>Overview:</strong> Digital Standard Solution is a premier loan investment company providing strategic financing solutions to businesses and individuals globally. Established over 10 years ago, our firm has become synonymous with trust, agility, and professionalism in investment lending.
           </p>
 
           <p className="text-lg text-black mb-6">
