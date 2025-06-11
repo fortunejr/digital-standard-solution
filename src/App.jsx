@@ -6,10 +6,7 @@ import Footer from './Components/Footer/Footer'
 import About from './Pages/About/About'
 import Services from './Pages/Services/Services'
 import Contact from './Pages/Contact/Contact'
-import Products from './Pages/Products/Products'
 import Blog from './Pages/Blog/Blog'
-import Claims from './Pages/Claims/Claims'
-
 const App = () => {
   return (
     <div>
