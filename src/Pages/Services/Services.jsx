@@ -1,157 +1,123 @@
-import React, { useState } from 'react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { img1, img3, img4, img5, img6 } from '../../imports'
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { img1, img2, img3, img4 } from '../../imports';
 
-const serviceListIndividual = [
+const loanServices = [
   {
-    name: 'Personalised Insurance Assessments',
-    desc: 'One-on-one consultations to identify ideal coverage based on lifestyle, assets, and risk profile.',
+    category: 'Business Expansion Loans',
+    details: [
+      'Equipment and technology upgrades',
+      'Hiring and talent expansion',
+      'New location rollouts',
+      'Marketing and sales development'
+    ],
     img: img1
   },
   {
-    name: 'Multi-Policy Bundling & Discounts',
-    desc: 'Save money by bundling home, car, and life insurance policies.',
+    category: 'Real Estate Investment Loans',
+    details: [
+      'Property acquisition and development',
+      'Renovation and refurbishment',
+      'Multi-unit investments',
+      'Commercial project financing'
+    ],
+    img: img2
+  },
+  {
+    category: 'Working Capital Loans',
+    details: [
+      'Bridging seasonal gaps',
+      'Managing inventory and receivables',
+      'Covering operational expenses'
+    ],
     img: img3
   },
   {
-    name: 'Annual Policy Review & Updates',
-    desc: 'We adjust your coverage as your circumstances change.',
+    category: 'Project-Based Financing',
+    details: [
+      'Custom repayment terms',
+      'Milestone-based funding',
+      'Industry-specific underwriting'
+    ],
     img: img4
   }
-]
+];
 
-const serviceListBusinesses = [
-  {
-    name: 'Risk Management Planning',
-    desc: 'Identify key risk exposures and develop an insurance strategy tailored to your industry.',
-    img: img5
-  },
-  {
-    name: 'Employee Benefits Insurance',
-    desc: 'Group life and income protection for staff retention and peace of mind.',
-    img: img6
-  },
-  {
-    name: 'Custom SME & Corporate Packages',
-    desc: 'Insurance solutions for startups, SMEs, and enterprises.',
-    img: img1
-  }
-]
-
-const serviceListAdded = [
-  {
-    name: 'Claims Assistance Hotline',
-    desc: 'Quick access to support when you need to file a claim.',
-    img: img3
-  },
-  {
-    name: '24/7 Customer Support',
-    desc: 'Round-the-clock assistance to help with any insurance queries.',
-    img: img4
-  },
-  {
-    name: 'Renewal Alerts & Proactive Consultation',
-    desc: 'Timely reminders and strategy reviews to keep your policies up to date.',
-    img: img5
-  }
-]
+const loanBenefits = [
+  'Low-interest rates',
+  'Repayment flexibility (including interest-only periods)',
+  'Loan approvals in as little as 7–10 business days',
+  'One-on-one expert support throughout the process'
+];
 
 const Services = () => {
-  const [showIndividual, setShowIndividual] = useState(false)
-  const [showBusiness, setShowBusiness] = useState(false)
-  const [showAdded, setShowAdded] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const sectionToggle = (section) => {
-    if (section === 'individual') setShowIndividual(!showIndividual)
-    if (section === 'business') setShowBusiness(!showBusiness)
-    if (section === 'added') setShowAdded(!showAdded)
-  }
-
-  const renderServiceCards = (list) => (
-    <div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-white mt-5'>
-      {list.map((item, i) => (
-        <div key={i} className='bg-gray-900 p-5 rounded-3xl shadow-lg'>
-          <img src={item.img} alt={item.name} className='w-full h-52 object-cover rounded-2xl mb-4' />
-          <h3 className='font-bold text-xl text-customYellow mb-2'>{item.name}</h3>
-          <p className='text-sm text-gray-300'>{item.desc}</p>
-        </div>
-      ))}
-    </div>
-  )
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
-    <div className='px-7 py-10 bg-customOrange'>
-      <div className='container mx-auto text-white'>
-        <h2 className='text-3xl font-bold'>Services</h2>
-        <h4 className='text-lg'>Tailored Services to Match Your Life and Business Needs</h4>
-        <p className='w-4/5 mt-2'>
-          Oaks & Trust Insurance is more than just a policy provider. We are your strategic partner in managing risk. Our services go beyond standard cover to offer expert guidance, structured planning, and end-to-end claims support.
+    <div className="px-6 py-16 md:px-20 bg-white text-black">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-customBlue text-center mb-4">
+          Flexible Investment Loans Designed for Strategic Growth
+        </h2>
+        <p className="text-center text-lg max-w-3xl mx-auto mb-10">
+          At Valley Oak Finance, we recognize that no two financial needs are alike.
+          Our services are designed to support entrepreneurs, SMEs, and investors with
+          reliable capital that fosters sustainable growth.
         </p>
-        <h3 className='mt-4 text-xl'>Our Key Services Include:</h3>
 
-        {/* Section: For Individuals */}
-        <div className='mt-8 cursor-pointer' onClick={() => sectionToggle('individual')}>
-          <div className='flex justify-between items-center bg-black p-4 rounded-xl'>
-            <h2 className='text-2xl font-semibold'>For Individuals:</h2>
-            {showIndividual ? <ChevronUp /> : <ChevronDown />}
+        {loanServices.map((service, index) => (
+          <div key={index} className="mb-6">
+            <div
+              className="flex justify-between items-center bg-customBlue text-white px-6 py-4 rounded-xl cursor-pointer"
+              onClick={() => toggleAccordion(index)}
+            >
+              <h3 className="text-xl font-semibold">{service.category}</h3>
+              {activeIndex === index ? <ChevronUp /> : <ChevronDown />}
+            </div>
+            <AnimatePresence>
+              {activeIndex === index && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="p-5 border border-t-0 border-gray-300 rounded-b-xl bg-gray-50">
+                    <img src={service.img} alt={service.category} className="w-full h-56 object-cover rounded-xl mb-4" />
+                    <ul className="list-disc list-inside space-y-1 text-black">
+                      {service.details.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-          <AnimatePresence>
-            {showIndividual && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {renderServiceCards(serviceListIndividual)}
-              </motion.div>
-            )}
-          </AnimatePresence>
+        ))}
+
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-customBlue mb-4">Why Choose Our Loan Solutions?</h3>
+          <ul className="list-disc list-inside text-black space-y-2">
+            {loanBenefits.map((benefit, i) => (
+              <li key={i}>{benefit}</li>
+            ))}
+          </ul>
         </div>
 
-        {/* Section: For Businesses */}
-        <div className='mt-8 cursor-pointer' onClick={() => sectionToggle('business')}>
-          <div className='flex justify-between items-center bg-black p-4 rounded-xl'>
-            <h2 className='text-2xl font-semibold'>For Businesses:</h2>
-            {showBusiness ? <ChevronUp /> : <ChevronDown />}
-          </div>
-          <AnimatePresence>
-            {showBusiness && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {renderServiceCards(serviceListBusinesses)}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-
-        {/* Section: Added Support Services */}
-        <div className='mt-8 cursor-pointer' onClick={() => sectionToggle('added')}>
-          <div className='flex justify-between items-center bg-black p-4 rounded-xl'>
-            <h2 className='text-2xl font-semibold'>Added Support Services:</h2>
-            {showAdded ? <ChevronUp /> : <ChevronDown />}
-          </div>
-          <AnimatePresence>
-            {showAdded && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {renderServiceCards(serviceListAdded)}
-              </motion.div>
-            )}
-          </AnimatePresence>
+        <div className="text-center mt-10">
+          <button className="bg-customYellow text-black px-6 py-3 font-semibold rounded-lg hover:bg-opacity-90 transition duration-300">
+            Get in Touch
+          </button>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
