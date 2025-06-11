@@ -81,8 +81,8 @@ const Services = () => {
   )
 
   return (
-    <div className='px-7 py-10 bg-customOrange'>
-      <div className='container mx-auto text-white'>
+    <div className='px-12 py-10 bg-customOrange'>
+      <div className='container mx-auto max-w-4xl text-white'>
         <h2 className='text-3xl font-bold'>Services</h2>
         <h4 className='text-lg'>Tailored Services to Match Your Life and Business Needs</h4>
         <p className='w-4/5 mt-2'>
