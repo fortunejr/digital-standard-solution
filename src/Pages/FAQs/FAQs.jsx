@@ -45,8 +45,8 @@ const FAQs = () => {
   return (
     <div className="bg-white px-7 py-14">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl font-bold text-white mb-3">Your Questions Answered</h2>
-        <p className="text-white mb-10">Explore frequently asked questions about our investment loan services.</p>
+        <h2 className="text-3xl font-bold text-customBlue mb-3">Your Questions Answered</h2>
+        <p className="text-black mb-10">Explore frequently asked questions about our investment loan services.</p>
 
         <div className="space-y-5">
           {faqData.map((item, index) => (
