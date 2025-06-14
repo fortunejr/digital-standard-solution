@@ -65,7 +65,7 @@ const Services = () => {
           Flexible Investment Loans Designed for Strategic Growth
         </h2>
         <p className="text-center text-lg max-w-3xl mx-auto mb-10">
-          At Valley Oak Finance, we recognize that no two financial needs are alike.
+          At Digital Standard Solution, we recognize that no two financial needs are alike.
           Our services are designed to support entrepreneurs, SMEs, and investors with
           reliable capital that fosters sustainable growth.
         </p>

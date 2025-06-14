@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link } from 'react-router'
 import { IoIosMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import { logo } from '../../imports';
+import { logo1 } from '../../imports';
 
 const Navbar = () => {
     const menuItems = [
@@ -38,7 +38,7 @@ const Navbar = () => {
     <div className='container mx-auto px-9 py-4'>
         <div className='lg:py-0.5 flex items-center justify-between'>
         <Link to = "/" >
-        <img className='lg:h-18 lg:mr-60 h-12' src= {logo} alt="" />
+        <img className='lg:h-18 lg:mr-60 h-12' src= {logo1} alt="" />
         </Link>
         <div className='hidden gap-10 mx-auto lg:flex cursor-pointer'>
             {menuItems.map(menu => (
@@ -50,7 +50,7 @@ const Navbar = () => {
 
               :
               <Link to={menu.link} className='nav-link'>
-                <p className='nav-menu hover:text-customOrange'>{menu.name}</p>
+                <p className='nav-menu hover:text-customBlue'>{menu.name}</p>
                 {/* {menu.name} */}
               </Link>
 

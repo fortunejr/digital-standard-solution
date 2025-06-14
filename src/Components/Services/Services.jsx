@@ -34,7 +34,7 @@ const Services = () => {
         </h2>
 
         <p className="text-lg text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-          At Valley Oak Finance, we recognize that no two financial needs are alike.
+          At Digital Standard Solution, we recognize that no two financial needs are alike.
           Our services are designed to support entrepreneurs, SMEs, and investors with reliable capital
           that fosters sustainable growth. Each loan is tailored, competitively priced,
           and structured to deliver maximum impact.

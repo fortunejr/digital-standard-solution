@@ -55,7 +55,7 @@ const WhyChooseUs = () => {
         <div className="bg-white text-black p-6 md:p-10 rounded-xl shadow-lg">
           <FaQuoteLeft className="text-customBlue text-3xl mb-4" />
           <p className="italic text-lg">
-            “Valley Oak Finance delivered what the banks couldn’t: speed, flexibility, and genuine support. They were instrumental in helping us scale.”
+            “Digital Standard Solution delivered what the banks couldn’t: speed, flexibility, and genuine support. They were instrumental in helping us scale.”
           </p>
           <p className="mt-4 font-bold text-customBlue">
             — David R., Commercial Property Developer

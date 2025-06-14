@@ -9,7 +9,7 @@ const About = () => {
         </h1>
 
         <p className="text-lg text-black mb-8 leading-relaxed">
-          <strong>Overview:</strong> Valley Oak Finance is a premier loan investment company providing
+          <strong>Overview:</strong> Digital Standard Solution is a premier loan investment company providing
           strategic financing solutions to businesses and individuals globally. Established over 10 years ago,
           our firm has become synonymous with trust, agility, and professionalism in investment lending.
         </p>
