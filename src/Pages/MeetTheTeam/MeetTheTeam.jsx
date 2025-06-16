@@ -12,7 +12,7 @@ const MeetTheTeam = () => {
           <img
             src={dannyagvar}
             alt="Danny Avgar"
-            className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-customBlue"
+            className="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover border-4 border-customBlue"
           />
           <div>
             <h3 className="text-xl md:text-2xl font-semibold text-customBlue">
@@ -36,7 +36,7 @@ const MeetTheTeam = () => {
             <img
             src={sandragrego}
             alt="Sandra Agrego"
-            className="mt-5 w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-customBlue"
+            className="mt-5 w-60 h-60 md:w-72 md:h-72 rounded-full object-cover border-4 border-customBlue"
             />
             <div>
                 <h3 className="text-xl md:text-2xl font-semibold text-customBlue">
