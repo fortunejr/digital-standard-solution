@@ -19,6 +19,10 @@ const Navbar = () => {
         link: "/blog"
       },
       {
+        name: "Meet The Team",
+        link: "/team"
+      },
+      {
         name: "FAQs",
         link: "/faq"
       },
