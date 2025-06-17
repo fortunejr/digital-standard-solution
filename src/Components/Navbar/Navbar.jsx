@@ -38,7 +38,7 @@ const Navbar = () => {
     <div className='container mx-auto px-9 py-4'>
         <div className='lg:py-0.5 flex items-center justify-between '>
         <Link to = "/" >
-        <img className='lg:h-18 lg:mr-60 h-12' src= {logo1} alt="" />
+        <img className='lg:h-18 lg:mr-60 h-16' src= {logo1} alt="" />
         </Link>
         <div className='hidden gap-10 mx-auto lg:flex cursor-pointer'>
             {menuItems.map(menu => (

@@ -14,7 +14,7 @@ const Footer = () => {
       {/* Logo and Description */}
       <div className='lg:w-1/3'>
       <Link to = {'/'}>
-        <img className='h-14 mb-4' src={logo2} alt="Digital Standard Solution logo" />
+        <img className='h-16 mb-4' src={logo2} alt="Valley Oak Finance logo" />
       </Link>
         <p className='text-white text-sm leading-relaxed'>
           Let’s Discuss Your Insurance Needs
@@ -26,11 +26,7 @@ const Footer = () => {
       {/* Contact Info */}
       <div className='lg:w-1/3'>
         <h2 className='font-bold text-white pb-3 pt-7 lg:pt-0'>Contact Information</h2>
-        <p className='text-white text-sm'>📍 Oaks & Trust Insurance Headquarters
-        Level 10, 345 Collins Street
-        Melbourne, VIC 3000
-        </p>
-        <p className='text-white text-sm mt-2'>📧 info@digitalstandardsolution.com </p>
+        <p className='text-white text-sm mt-2'>📧 info@valleyoakfinance.com </p>
         <p className='text-white text-sm mt-2'>📞 +1 (800) 123-4567</p>
       </div>
 

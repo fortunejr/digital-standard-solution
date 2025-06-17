@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const faqData = [
   {
-    question: 'Who is eligible for an investment loan with Digital Standard Solution',
+    question: 'Who is eligible for an investment loan with Valley Oak Finance',
     answer:
       'We offer loans to individuals and registered businesses globally. Whether you\'re an established company or an emerging enterprise, we provide financing options that suit your needs.'
   },

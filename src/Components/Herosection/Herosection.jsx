@@ -11,12 +11,12 @@ const Herosection = () => {
         
         {/* Left Side - Text Content */}
         <div className="lg:w-2/5 w-full">
-          <p className="text-white font-bold">Digital Standard Solution</p>
+          <p className="text-white font-bold"> Valley Oak Finance</p>
           <h1 className="text-3xl lg:text-5xl font-black text-white leading-tight pb-6">
             Empowering Growth Through Strategic Investment Lending
           </h1>
           <p className="text-white text-base lg:text-sm">
-            Digital Standard Solution offers tailored, low-interest investment loans for individuals and businesses ready to expand, build and lead with confidence.
+          Valley Oak Finance offers tailored, low-interest investment loans for individuals and businesses ready to expand, build and lead with confidence.
           </p>
 
           {/* Buttons */}
@@ -27,7 +27,7 @@ const Herosection = () => {
                 Request a Loan Quote
               </button>
             </a>
-            <a href="mailto:info@digitalstandardsolution.com">
+            <a href="mailto:info@valleyoakfinance.com">
               <button className="w-full sm:w-auto flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-customYellow font-bold px-5 py-3 rounded-2xl">
                 <FaCalendarCheck size={24} />
                 Book a Free Consultation
